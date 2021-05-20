@@ -1,0 +1,64 @@
+Source,Log Type,Destination(s),Links,Notes
+ACM,Certificate Transparency Logs,Published Publicly,https://docs.aws.amazon.com/acm/latest/userguide/acm-bestpractices.html#best-practices-transparency,
+API Gateway,Access Logs,CloudWatch Logs,https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html,
+Amplify,Access Logs,Download as CSV,https://docs.aws.amazon.com/amplify/latest/userguide/access-logs.html,
+App Mesh,Access Logs,Sent to Envoy and K8s,https://docs.aws.amazon.com/app-mesh/latest/userguide/observability.html,
+AppSync,Debug Logs,CloudWatch Logs,https://docs.aws.amazon.com/appsync/latest/devguide/monitoring.html,
+Aurora,Detailed Acitivity Logs,Kinesis Data Stream,https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html,
+AutoScaling,ASG State Change Events,SNS,https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html,
+Audit Manager,Control Activity Logs,Via API or UI,https://docs.aws.amazon.com/audit-manager/latest/userguide/review-controls.html#review-changelog,
+Batch,Container Logs,"CloudWatch Logs, Splunk, Syslog",https://aws.amazon.com/blogs/compute/custom-logging-with-aws-batch/,"Splunk, Syslog"
+Chime,SIP Message Logs,CloudWatch Logs,https://docs.aws.amazon.com/chime/latest/ag/monitoring-cloudwatch.html#cw-logs,
+CloudFormation,Stack Events,Console,https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-rollback-email/,Only available via UI/API
+CloudFront,Standard Logs,S3,https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html,
+CloudFront,Real-Time Logs,Kinesis Data Stream,https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html,
+CloudHSM,Audit Logs,CloudWatch Logs,https://docs.aws.amazon.com/cloudhsm/latest/userguide/get-audit-logs-from-cloudwatch.html,
+CloudTrail,AWS Account Audit Logs,"S3, CloudWatch",https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html,
+CloudWatch Logs,CloudWatch Logs,"ElasticSearch, Lambda, S3",https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions.html,Via subscription filters or one-time exports
+CodeBuild,Build Logs,"CloudWatch, S3",https://docs.aws.amazon.com/codebuild/latest/APIReference/API_LogsLocation.html,
+CodeDeploy,Deployment Logs,EC2 Instance,https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-view-logs.html,Only sent to CloudWatch when EC2 agent is installed
+Config,Resource Change Events,SQS,https://docs.aws.amazon.com/config/latest/developerguide/monitor-resource-changes.html,"* Not a ""log"""
+Connect,Contact Flow Logs,CloudWatch Logs,https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-logs.html#enable-contact-flow-logs,
+DataPipeline,Pipeline Logs,S3,https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-viewing-logs.html,
+DataSync,Task Logging,CloudWatch Logs,https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs,
+DirectoryService,AWS Managed Microsoft AD Logs,CloudWatch Logs,https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_enable_log_forwarding.html,
+DMS,Migration Logs,CloudWatch Logs,https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.Logging.html,
+DocDB,Profiler Logs,CloudWatch Logs,https://docs.aws.amazon.com/documentdb/latest/developerguide/logging-and-monitoring.html,
+DynamoDB,Stream of Table Changes,Kinesis Data Stream,https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/streamsmain.html,
+EC2,Instance Logs,CloudWatch Logs,https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html,Only sent to CloudWatch when EC2 agent is installed
+ECS,Container Logs,"CloudWatch Logs, Splunk, Fluentd, Syslog, Firelens",https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-logging-monitoring.html,Requires configuration of the log driver
+EKS,Control Plane Logs,CloudWatch Logs,https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html,
+ElastiCache,Cluster Events,SNS,https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ECEvents.SNS.html,"* Not a ""log"""
+ElasticBeanstalk,Instance Logs,CloudWatch Logs,https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.logging.html,Only sent to CloudWatch when EC2 agent is installed
+ELB,Access Logs,S3,https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html,
+ELBv2,Access Logs,S3,https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html,
+EMR,Cluster Logs,S3,https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-view-web-log-files.html,Cluster must be configured to archive to S3
+Firehose,Delivery Error Logs,CloudWatch Logs,https://docs.aws.amazon.com/firehose/latest/dev/monitoring-with-cloudwatch-logs.html,
+GlobalAccelerator,Flow Logs,S3,https://docs.aws.amazon.com/global-accelerator/latest/dg/monitoring-global-accelerator.flow-logs.html,
+Greengrass,Debug Logs,CloudWatch Logs,https://docs.aws.amazon.com/greengrass/latest/developerguide/greengrass-logs-overview.html,
+Imagebuilder,Build Logs,CloudWatch Logs,https://docs.aws.amazon.com/imagebuilder/latest/userguide/how-image-builder-works.html#image-builder-logs,
+ImportExport,Import Logs,S3,http://s3.amazonaws.com/awsdocs/ImportExport/latest/AWSImportExport-dg.pdf,
+Kafka,Broker Logs,"CloudWatch Logs, S3, Kinesis Firehose",https://docs.aws.amazon.com/msk/latest/developerguide/msk-logging.html,
+Kendra,Data Source Logs,CloudWatch Logs,https://docs.aws.amazon.com/kendra/latest/dg/cloudwatch-logs.html,
+Kinesis,"Data Analytics Task, Application, and Operator Logs",CloudWatch Logs,https://docs.aws.amazon.com/kinesisanalytics/latest/java/cloudwatch-logs.html,
+Lambda,Application Logs,CloudWatch Logs,https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html,
+Lex,Conversation Logs,CloudWatch Logs,https://docs.aws.amazon.com/lex/latest/dg/conversation-logs.html,
+Lex,Audio Logs,S3,https://docs.aws.amazon.com/lex/latest/dg/conversation-logs.html,
+Lightsail,All,CloudWatch Logs,https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-viewing-container-service-container-logs,"Depends on the configuration of the underlying resources (DB, EC2, etc.)"
+MQ,ActiveMQ and RabbitMQ Logs,CloudWatch Logs,https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/security-logging-monitoring-configure-cloudwatch.html,
+Neptune,Audit Logs,Download as UTF,https://docs.aws.amazon.com/neptune/latest/userguide/auditing.html,Can only be downloaded from console/API
+NetworkFirewall,Firewall Logs,"CloudWatch Logs, S3, Kinesis Firehose",https://docs.aws.amazon.com/network-firewall/latest/developerguide/firewall-update-logging-configuration.html,
+OpsWorks,Instance Logs,CloudWatch Logs,https://docs.aws.amazon.com/opsworks/latest/userguide/monitoring-cloudwatch-logs.html,Must be enabled for the Chef layer
+QLDB,Ledger Logs,Kinesis Data Stream,https://docs.aws.amazon.com/qldb/latest/developerguide/streams.html,
+RDS,Database Logs,CloudWatch Logs,https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html,Must be enabled for RDS instance
+Redshift,Connection Logs,S3,https://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging,
+Route53,Query Logs,CloudWatch Logs,"https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logs.html",
+S3,Bucket Access Logs,S3,https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html,
+SageMaker,Jupyter Job Logs,CloudWatch Logs,https://docs.aws.amazon.com/sagemaker/latest/dg/logging-cloudwatch.html,
+SNS,SMS Status Logs,CloudWatch Logs,https://docs.aws.amazon.com/sns/latest/dg/sms_stats_cloudwatch.html,
+StepFunctions,Workflow Logs,CloudWatch Logs,https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html,
+WAF,Firewall Logs,Kinesis Firehose,https://docs.aws.amazon.com/waf/latest/developerguide/logging.html,
+WorkDocs,Site-Wide Activity Feed,Download as CSV,https://docs.aws.amazon.com/workdocs/latest/adminguide/site-activity.html,Only accessible via console/API
+WorkMail,Email Event Logs,CloudWatch Logs,https://docs.aws.amazon.com/workmail/latest/adminguide/tracking.html,
+VPC,VPC Flow Logs,"CloudWatch Logs, S3",https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html,
