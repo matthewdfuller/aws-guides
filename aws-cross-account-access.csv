@@ -1,0 +1,94 @@
+Service,Data,AWS Organizations Support,AWS RAM Support,Service-Level Integration,Notes,Link
+Access Analyzer,Findings,Yes,No,Yes,"If you're configuring AWS IAM Access Analyzer in your AWS Organizations management account, you can add a member account in the organization as the delegated administrator to manage Access Analyzer for your organization. The delegated administrator has permissions to create and manage analyzers with the organization as the zone of trust. Only the management account can add a delegated administrator.",https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-settings.html
+ACMPCA,Private CAs,Yes,Yes,No,Via RAM,https://aws.amazon.com/blogs/security/how-to-use-aws-ram-to-share-your-acm-private-ca-cross-account/
+API Gateway,Lambda Proxy Backends,No,No,Yes,,https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-cross-account-lambda-integrations.html
+API Gateway,Authorizers,No,No,Yes,,https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-lambda-authorizer-cross-account-lambda-authorizer.html
+API Gateway,Private APIs,No,No,Yes,,https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies.html
+AppFlow,Application Data,No,No,No,Via privatelink,https://aws.amazon.com/blogs/apn/building-secure-and-private-data-flows-between-aws-and-salesforce-using-amazon-appflow/
+App Mesh,Application Meshes,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html
+AppSync,Data Sources,No,No,No,Via Lambda,https://aws.amazon.com/blogs/mobile/appsync-lambda-cross-account/
+Artifact,Compliance Artifacts,Yes,No,Yes,,https://docs.aws.amazon.com/artifact/latest/ug/manage-org-agreement.html
+Athena*,"Data Catalogs, S3 Buckets",No,No,Yes,Outbound access to objects,https://docs.aws.amazon.com/athena/latest/ug/cross-account-permissions.html
+Audit Manager,Audit Reports and Evidence,Yes,No,Yes,,https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-audit-manager.html
+Backup,"Backup Policies, Backed Up Data",Yes,No,Yes,,https://docs.aws.amazon.com/aws-backup/latest/devguide/create-cross-account-backup.html
+Batch*,S3 Bucket Data Stores,No,No,No,Technically uses S3 policies,https://aws.amazon.com/blogs/storage/cross-account-bulk-transfer-of-files-using-amazon-s3-batch-operations/
+Budgets,Budget Usage Data,Yes,No,Yes,Org can setup for member account,https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html
+CloudFormation,StackSets,Yes,No,Yes,,https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html
+CloudFront,Origin,No,No,No,,https://dlim716.medium.com/aws-cloudfront-cross-account-s3-origin-setup-99dcaa51e39d
+CloudFront,Logs,No,No,No,,https://serverfault.com/questions/933795/configure-aws-cloudfront-to-log-to-s3-bucket-in-another-aws-account
+CloudHSM,HSM Clusters,No,No,No,Via RAM,https://aws.amazon.com/premiumsupport/knowledge-center/cloudhsm-share-clusters/
+CloudSearch,Search Domains,No,No,Yes,Via resource policy,https://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html
+CloudTrail,Logs,Yes,No,Yes,BOTH S3 and Org access,https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudtrail.html
+CloudWatch,"Metrics, Alarms, Dashboards",Yes,No,Yes,,https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Cross-Account-Cross-Region.html
+CloudWatch,Logs,No,No,Yes,Via Subscriptions + Kinesis,https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CrossAccountSubscriptions.html
+CloudWatch,Events,Yes,No,Yes,,https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEvents-CrossAccountEventDelivery.html
+CodeArtifact,"Domains, Repositories",No,No,Yes,Via resource policies,https://docs.aws.amazon.com/codeartifact/latest/ug/domain-policies.html
+CodeBuild,"Projects, Report Groups",Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/codebuild/latest/userguide/project-sharing.html
+CodePipeline,"Artifacts, Metadata",No,No,Yes,Some changes via IAM,https://docs.aws.amazon.com/codepipeline/latest/userguide/pipelines-create-cross-account.html
+Cognito,User Pools,No,No,Yes,Only for API Gateway - limited,https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-cross-account-cognito-authorizer.html
+Compute Optimizer,Recommendations,Yes,No,No,,https://docs.aws.amazon.com/compute-optimizer/latest/ug/security-iam.html
+Config,Aggregated Config Data,Yes,No,Yes,,https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-config.html
+Detective,Detective Data,No,No,Yes,,https://docs.aws.amazon.com/detective/latest/adminguide/security_iam_service-with-iam.html
+Direct Connect,Gateway Association,No,No,Yes,,https://docs.aws.amazon.com/directconnect/latest/UserGuide/multi-account-associate-vgw.html
+Directory Service,AD Domain,Yes,No,Yes,,https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_directory_sharing.html
+DLM,EBS Snapshots,No,No,Yes,"Technically sharing EBS, but via DLM",https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-policy.html
+DMS,Data Migration Endpoints,No,No,No,Technically sharing Database data,https://aws.amazon.com/blogs/database/set-up-aws-dms-for-cross-account-migration/
+DocumentDB,Cluster Snapshots,No,No,Yes,,https://docs.aws.amazon.com/documentdb/latest/developerguide/backup_restore-share_cluster_snapshots.html
+DynamoDB,Tables,No,No,No,Via Glue,https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-dynamo-db-cross-account.html
+EBS,Snapshots,No,No,Yes,,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html
+EC2,Capacity Reservations,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/capacity-reservation-sharing.html
+EC2,Dedicated Hosts,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dh-sharing.html
+ECR,Images,No,No,Yes,ECR policy but secondary acct must be allowed to ecr-login,https://aws.amazon.com/premiumsupport/knowledge-center/secondary-account-access-ecr/
+EFS,File Systems,No,No,Yes,Via VPC Peering,https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html#manage-fs-access-vpc-peering
+ELB,Access Logs,No,No,Yes,Requires s3 bucket policy,https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html
+EMR,Data Catalogs,No,No,Yes,,https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-lf-cross-account-access.html
+EventBridge,Events,No,No,Yes,,https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html
+Firehose,Delivery Streams,No,No,No,Odd IAM role use case,https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#cross-account-delivery-es
+Firewall Manager,Firewall Policies,Yes,No,No,Via Org,https://docs.aws.amazon.com/waf/latest/developerguide/enable-integration.html
+Glacier,Vault access,No,No,Yes,Vault policy,https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html
+Glue,Data catalog resources,No,No,Yes,,https://docs.aws.amazon.com/glue/latest/dg/cross-account-access.html
+GuardDuty,Findings,Yes,No,Yes,,https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_accounts.html
+Health,Health Events,Yes,No,No,Via Org,https://docs.aws.amazon.com/health/latest/ug/enable-organizational-view-in-health-console.html
+IAM,Roles,No,No,Yes,Assume role,https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html
+Image Builder,"Components, Images, Recipes",Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/imagebuilder/latest/userguide/manage-shared-resources.html
+KMS,Keys,No,No,Yes,Key policies,https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html
+Lake Formation,"Data Catalog Tables, Databases",Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/lake-formation/latest/dg/crosss-account-how-works.html
+Lambda,Function Invocation,No,No,Yes,Function resource policies,https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html
+Lambda,Layers,No,No,Yes,Layer resource policies,https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html
+License Manager,License Inventory,Yes,Yes,No,Via Org,https://docs.aws.amazon.com/license-manager/latest/userguide/settings.html
+License Manager,Host Resource Groups,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/license-manager/latest/userguide/host-resource-groups.html
+Macie,Macie Findings,Yes,No,Yes,Either Org or native,https://docs.aws.amazon.com/macie/latest/user/macie-accounts.html
+Marketplace,Marketplace Licenses,Yes,No,No,Via Org,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-using-service-linked-roles.html
+Network Firewall,Security Policies,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/network-firewall/latest/developerguide/sharing.html
+Organizations,Accounts,Yes,No,Yes,,https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html
+Outposts,"Outposts, Gateway Route Tables, Subnets",Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/outposts/latest/userguide/sharing-outposts.html
+QuickSight,Data Templates,No,No,Yes,,https://aws.amazon.com/premiumsupport/knowledge-center/quicksight-cross-account-template/
+RAM,Numerous Services,Yes,Yes,Yes,,https://docs.aws.amazon.com/ram/latest/userguide/shareable.html
+RDS,Aurora DB Cluster,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Clone.html#Aurora.Managing.Clone.Cross-Account
+RDS,Snapshots,No,No,Yes,,https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ShareSnapshot.html
+Redshift,Database Data,No,No,Yes,Preview mode?,https://docs.aws.amazon.com/redshift/latest/dg/across-account.html
+Redshift,Source Data,No,No,No,"Via IAM roles, but ""native"" support for role chaining",https://aws.amazon.com/premiumsupport/knowledge-center/redshift-s3-cross-account/
+Route53,Forwarding Rules,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-rules-managing.html#resolver-rules-managing-sharing
+Route53,Private Hosted Zones,No,No,Yes,Domain resolution to private VPC,https://aws.amazon.com/premiumsupport/knowledge-center/private-hosted-zone-different-account/
+Route53,Query Logs,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logging-configurations-managing-sharing.html
+Route53,Resolver DNS Firewall Rule Groups,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-dns-firewall-rule-group-sharing.html
+S3,Buckets,No,No,Yes,Via bucket ACL or policy,https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-walkthroughs-managing-access-example2.html
+S3,Storage Lens Metrics,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_console_organizations_enabling_trusted_access.html
+Secrets Manager,Secret,No,No,Yes,Via secret resource policy and KMS policy,https://aws.amazon.com/premiumsupport/knowledge-center/secrets-manager-share-between-accounts/
+Security Hub,Findings,Yes,No,Yes,Both org and non-org admin/member support,https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-accounts.html
+Service Catalog,Catalog,Yes,No,No,,https://aws.amazon.com/blogs/mt/simplify-sharing-your-aws-service-catalog-portfolios-in-an-aws-organizations-setup/
+Service Quotas,Quota Request Template,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/servicequotas/latest/userguide/organization-templates.html
+SES,Identity,No,No,Yes,Sending authorization policy,https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-overview.html
+Shield,DDOS Protection,-,No,-,"Not really shared data, but subscription is shared for all managed billing accounts",https://docs.aws.amazon.com/waf/latest/developerguide/enable-ddos-prem.html
+Single Sign On,Account Access,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/singlesignon/latest/userguide/step1.html
+SNS,Topic,No,No,Yes,Multiple ways of sharing,https://docs.amazonaws.cn/en_us/sns/latest/dg/sns-access-policy-use-cases.html#sns-grant-aws-account-access-to-topic
+SQS,Queue,No,No,Yes,Queue policy document,https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html
+Systems Manager,"Incident Contacts, Response Plans",Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/incident-manager/latest/userguide/sharing.html
+Systems Manager,Systems Manager Explorer Data,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-setup-delegated-administrator.html
+Trusted Advisor,Checks,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/awssupport/latest/user/organizational-view.html
+VPC,Peering Connections,No,No,Yes,,https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/peer-with-vpc-in-another-account.html
+VPC,Prefix Lists,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/vpc/latest/userguide/sharing-managed-prefix-lists.html
+VPC,Subnets,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html#vpc-sharing-share-subnet
+VPC,Traffic Mirroring Targets,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/vpc/latest/mirroring/cross-account-traffic-mirroring-targets.html
+VPC,Transit Gateways,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#tgw-sharing
+VPC,Transit Gateway Multicast Domains,Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#multicast-sharing.html
