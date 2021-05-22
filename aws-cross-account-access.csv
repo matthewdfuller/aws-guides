@@ -1,5 +1,5 @@
 Service,Data,AWS Organizations Support,AWS RAM Support,Service-Level Integration,Notes,Link
-Access Analyzer,Findings,Yes,No,Yes,"If you're configuring AWS IAM Access Analyzer in your AWS Organizations management account, you can add a member account in the organization as the delegated administrator to manage Access Analyzer for your organization. The delegated administrator has permissions to create and manage analyzers with the organization as the zone of trust. Only the management account can add a delegated administrator.",https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-settings.html
+Access Analyzer,Findings,Yes,No,Yes,Delegated admin,https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-settings.html
 ACMPCA,Private CAs,Yes,Yes,No,Via RAM,https://aws.amazon.com/blogs/security/how-to-use-aws-ram-to-share-your-acm-private-ca-cross-account/
 API Gateway,Lambda Proxy Backends,No,No,Yes,,https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-cross-account-lambda-integrations.html
 API Gateway,Authorizers,No,No,Yes,,https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-lambda-authorizer-cross-account-lambda-authorizer.html
