@@ -81,7 +81,7 @@ Service Quotas,Quota Request Template,Yes,No,No,Via Orgs,https://docs.aws.amazon
 SES,Identity,No,No,Yes,Sending authorization policy,https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization-overview.html
 Shield,DDOS Protection,-,No,-,"Not really shared data, but subscription is shared for all managed billing accounts",https://docs.aws.amazon.com/waf/latest/developerguide/enable-ddos-prem.html
 Single Sign On,Account Access,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/singlesignon/latest/userguide/step1.html
-SNS,Topic,No,No,Yes,Multiple ways of sharing,https://docs.amazonaws.cn/en_us/sns/latest/dg/sns-access-policy-use-cases.html#sns-grant-aws-account-access-to-topic
+SNS,Topic,No,No,Yes,Multiple ways of sharing,https://docs.aws.amazon.com/sns/latest/dg/sns-access-policy-use-cases.html#sns-grant-aws-account-access-to-topic
 SQS,Queue,No,No,Yes,Queue policy document,https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html
 Systems Manager,"Incident Contacts, Response Plans",Yes,Yes,No,Via RAM,https://docs.aws.amazon.com/incident-manager/latest/userguide/sharing.html
 Systems Manager,Systems Manager Explorer Data,Yes,No,No,Via Orgs,https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-setup-delegated-administrator.html
