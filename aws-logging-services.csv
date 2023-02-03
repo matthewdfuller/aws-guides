@@ -39,8 +39,8 @@ Greengrass,Debug Logs,CloudWatch Logs,https://docs.aws.amazon.com/greengrass/lat
 Imagebuilder,Build Logs,CloudWatch Logs,https://docs.aws.amazon.com/imagebuilder/latest/userguide/how-image-builder-works.html#image-builder-logs,
 ImportExport,Import Logs,S3,http://s3.amazonaws.com/awsdocs/ImportExport/latest/AWSImportExport-dg.pdf,
 IoT Core, message progress events, CloudWatch Logs, https://docs.aws.amazon.com/iot/latest/developerguide/cloud-watch-logs.html, Different Log Levels available; per device-level logging
-IoT Core Greengrass v2, Greengrass system logs, CloudWatch Logs and/or local device, https://docs.aws.amazon.com/greengrass/v2/developerguide/monitor-logs.html
-IoT Core Wireless, LoRaWAN and Sidewalk resource logging, CloudWatch Logs, https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-cwl-format.html
+IoT Core Greengrass v2, Greengrass system logs, CloudWatch Logs and/or local device, https://docs.aws.amazon.com/greengrass/v2/developerguide/monitor-logs.html,
+IoT Core Wireless, LoRaWAN and Sidewalk resource logging, CloudWatch Logs, https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-cwl-format.html,
 Kafka,Broker Logs,"CloudWatch Logs, S3, Kinesis Firehose",https://docs.aws.amazon.com/msk/latest/developerguide/msk-logging.html,
 Kendra,Data Source Logs,CloudWatch Logs,https://docs.aws.amazon.com/kendra/latest/dg/cloudwatch-logs.html,
 Kinesis,"Data Analytics Task, Application, and Operator Logs",CloudWatch Logs,https://docs.aws.amazon.com/kinesisanalytics/latest/java/cloudwatch-logs.html,
